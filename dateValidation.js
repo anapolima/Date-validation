@@ -26,7 +26,10 @@ function validateDate (_date)
                 {
                     return false;
                 }
-            break;
+                else
+                {
+                    return true;
+                }
 
             case 4:
             case 6:
@@ -36,7 +39,10 @@ function validateDate (_date)
                 {
                     return false;
                 }
-            break;
+                else
+                {
+                    return true;
+                }
 
             case 2:
                 if( ( year % 4 == 0 && year % 100 != 0 ) || ( year % 400 == 0)  )
@@ -45,6 +51,10 @@ function validateDate (_date)
                     {
                         return false;
                     }
+                    else
+                    {
+                        return true;
+                    }
                 }
                 else
                 {
@@ -52,8 +62,11 @@ function validateDate (_date)
                     {
                         return false;
                     }
+                    else
+                    {
+                        return true;
+                    }
                 }
-            break;
 
             default:
                 return false;
@@ -66,11 +79,11 @@ function validateDate (_date)
     }
     else
     {
-        throw new Error("Invalid date");
+        throw new Error("Invalid date")
     }
   }
   else
   {
-    throw new Error("The date string must be on the format DD/MM/YYYY");
+    throw new Error("The date string must be on the format DD/MM/YYYY")
   }
 }
