@@ -66,11 +66,11 @@ function validateDate (_date)
     }
     else
     {
-        throw new Error("Invalid date")
+        throw new Error("Invalid date");
     }
   }
   else
   {
-    throw new Error("The date string must be on the format DD/MM/YYYY")
+    throw new Error("The date string must be on the format DD/MM/YYYY");
   }
 }
