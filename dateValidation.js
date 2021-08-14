@@ -22,37 +22,37 @@ function validateDate (_date)
             case 8:
             case 10:
             case 12:
-            if (day > 31 || day < 1)
-            {
-                return false;
-            }
+                if (day > 31 || day < 1)
+                {
+                    return false;
+                }
             break;
 
             case 4:
             case 6:
             case 9:
             case 11:
-            if (day > 30 || day < 1)
-            {
-                return false;
-            }
+                if (day > 30 || day < 1)
+                {
+                    return false;
+                }
             break;
 
             case 2:
-            if( ( year % 4 == 0 && year % 100 != 0 ) || ( year % 400 == 0)  )
-            {
-            if (day > 29 || day < 1)
-            {
-                return false;
-            }
-            }
-            else
-            {
-            if (day > 28 || day < 1)
-            {
-                return false;
-            }
-            }
+                if( ( year % 4 == 0 && year % 100 != 0 ) || ( year % 400 == 0)  )
+                {
+                    if (day > 29 || day < 1)
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    if (day > 28 || day < 1)
+                    {
+                        return false;
+                    }
+                }
             break;
 
             default:
@@ -68,9 +68,9 @@ function validateDate (_date)
     {
         throw new Error("Invalid date")
     }
-    }
-    else
-    {
+  }
+  else
+  {
     throw new Error("The date string must be on the format DD/MM/YYYY")
-    }
+  }
 }
